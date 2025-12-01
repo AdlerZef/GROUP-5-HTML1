@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Members Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            margin-bottom: 15px;
+        }
+
+        .profile-header h2 {
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1.8em;
+        }
+
+        .nickname {
+            color: #764ba2;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .info-item {
+            margin: 8px 0;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 140px;
+        }
+
+        .info-value {
+            color: #333;
+            flex: 1;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .color-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: 10px;
+            vertical-align: middle;
+            border: 2px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👥Group 5 Members</h1>
+        
+        <div class="members-grid">
+            <!-- Member 1 -->
+            <div class="member-card">
+                <div class="profile-header">
+                    <img src="jeo.jpg" alt="Profile Picture" class="profile-img">
+                    <h2>Jeorge Railey A. Corbe</h2>
+                    <p class="nickname">"Jeo"</p>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">📋 Basic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">18 years old</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender:</span>
+                        <span class="info-value">Male</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎓 Academic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">BS omputer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year/Section:</span>
+                        <span class="info-value">2025-2026/1B </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID:</span>
+                        <span class="info-value">251-1309</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎯 Interests & Hobbies</div>
+                    <div class="info-item">
+                        <span class="info-label">Hobbies:</span>
+                        <span class="info-value">Arts, Dancing, Singing</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Subject:</span>
+                        <span class="info-value">Related to Arts</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Hangout Place:</span>
+                        <span class="info-value">Arcade</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">✨ Personal Info</div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Food:</span>
+                        <span class="info-value">Fries, Sweets, Milktea</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Color:</span>
+                        <span class="info-value">Black <span class="color-indicator" style="background-color: #000000;"></span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Skills:</span>
+                        <span class="info-value">Drawing, Dancing, Singing</span>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    "It is never too late to be what you might have been"
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/jrgcrb/" target="_blank">Facebook</a>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card">
+                <div class="profile-header">
+                    <img src="zef.jpg" alt="Profile Picture" class="profile-img">
+                    <h2>Zef Adler G. Catipon</h2>
+                    <p class="nickname">"Adler"</p>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">📋 Basic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">19 years old</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender:</span>
+                        <span class="info-value">Male</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎓 Academic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">BS Computer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year/Section:</span>
+                        <span class="info-value">2025-2026/1B</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID:</span>
+                        <span class="info-value">251-1533</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎯 Interests & Hobbies</div>
+                    <div class="info-item">
+                        <span class="info-label">Hobbies:</span>
+                        <span class="info-value">Playing online games</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Subject:</span>
+                        <span class="info-value">Programing</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Hangout Place:</span>
+                        <span class="info-value">Sea Side</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">✨ Personal Info</div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Food:</span>
+                        <span class="info-value">Sushi</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Color:</span>
+                        <span class="info-value">Pink <span class="color-indicator" style="background-color: #FF69B4;"></span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Skills:</span>
+                        <span class="info-value">Drawing</span>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    "NOT ALL TREASURE IS SILVER GOLD MATE"
+                </div>
+
+                <div class="social-links">
+                     <a href="https://www.instagram.com/its_lerrrrrr/" target="_blank">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card">
+                <div class="profile-header">
+                    <img src="john.jfif" alt="Profile Picture" class="profile-img">
+                    <h2>John Albert Alaurin Romulo</h2>
+                    <p class="nickname">"AJ"</p>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">📋 Basic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">18 years old</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender:</span>
+                        <span class="info-value">Male</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎓 Academic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">BS Computer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year/Section:</span>
+                        <span class="info-value"> 2025-2026/1B</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID:</span>
+                        <span class="info-value"> 251-1302</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎯 Interests & Hobbies</div>
+                    <div class="info-item">
+                        <span class="info-label">Hobbies:</span>
+                        <span class="info-value">Drawing and Painting</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Subject:</span>
+                        <span class="info-value">Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Hangout Place:</span>
+                        <span class="info-value">Near the ocean</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">✨ Personal Info</div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Food:</span>
+                        <span class="info-value">Chicken Adobo</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Color:</span>
+                        <span class="info-value">Pink <span class="color-indicator" style="background-color: #FF69B4;"></span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Skills:</span>
+                        <span class="info-value">Drawing</span>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    "The wind is rising, we must try to live"
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/17bXECSYb3/" target="_blank">Facebook</a>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="member-card">
+                <div class="profile-header">
+                    <img src="jack.jpg" alt="Profile Picture" class="profile-img">
+                    <h2>Jack F, Adila</h2>
+                    <p class="nickname">"Jak-Jak"</p>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">📋 Basic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">19 years old</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender:</span>
+                        <span class="info-value">Male</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎓 Academic Information</div>
+                    <div class="info-item">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">BS Computer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year/Section:</span>
+                        <span class="info-value"> 2025-2026/1B</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID:</span>
+                        <span class="info-value">251-1303</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">🎯 Interests & Hobbies</div>
+                    <div class="info-item">
+                        <span class="info-label">Hobbies:</span>
+                        <span class="info-value"> Calisthenics and  Reading Manhwa</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Subject:</span>
+                        <span class="info-value">Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Hangout Place:</span>
+                        <span class="info-value">Somewere that has Amazing View
+</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="section-title">✨ Personal Info</div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Food:</span>
+                        <span class="info-value"> Pastiers</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Favorite Color:</span>
+                        <span class="info-value">Black <span class="color-indicator" style="background-color: #000000;"></span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Skills:</span>
+                        <span class="info-value">Drawing</span>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    "any one can try hard to reach a certain goal but not anyone is persistent"
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/jack.adilan.9" target="_blank"> Facebook</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
